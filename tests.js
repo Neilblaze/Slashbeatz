@@ -50,3 +50,17 @@ const DOMboxes = document.getElementById('boxes');
 const DOMscore = document.getElementById('score');
 }*/
 
+h = canvas.height,
+	cntrrX = w / 2,
+	cntrrY = h / 2,
+	bZoneS = centerX,
+	bRightZEnd = cntrX + cntrX / (3/2),
+	bLeftZEnd = cntrX - cntrX / (3/2);
+let direction, boxes = 0,
+	score = 0,
+	oldX = 0,
+	oldY = 0,
+	movements = [],
+	xDirection = "",
+	yDirection = "";
+
