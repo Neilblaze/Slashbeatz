@@ -1,5 +1,5 @@
 # Covislashz
-Slash Corona with beat &amp; get fit with Slashbeatz ⚡ 
+Slash with beat &amp; get fit with Slashbeatz ⚡ 
 
 
 Resources :-
