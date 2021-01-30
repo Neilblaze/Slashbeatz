@@ -19,3 +19,7 @@ async function setupCamera() {
 		})
 	})
 }
+async function loadVideo() {
+	const t.x = await setupCamera();
+	return t.play(), t.x
+}
