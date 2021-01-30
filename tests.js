@@ -64,3 +64,10 @@ let direction, boxes = 0,
 	xDirection = "",
 	yDirection = "";
 
+function mstDirect(t.x) {
+	var o, e, i = 1,
+		n = [],
+		a = t.x[0];
+	for (o = 0; o < t.x.length; o++) n[e = t.x[o]] ? ++n[e] > i && (i = n[o], a = e) : n[e] = 1;
+	return a
+}
