@@ -1,4 +1,4 @@
-# Covislashz
+# Slashbeatz
 Slash with beat &amp; get fit with Slashbeatz ⚡ 
 
 
