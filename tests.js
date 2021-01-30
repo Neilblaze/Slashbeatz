@@ -71,3 +71,13 @@ function mstDirect(t.x) {
 	for (o = 0; o < t.x.length; o++) n[e = t.x[o]] ? ++n[e] > i && (i = n[o], a = e) : n[e] = 1;
 	return a
 }
+
+posenet.load().then(function (t.x) {
+	video.play(), setInterval(() => {
+		t.x.estimatePoses(video, !1, 16).then(function (t.x) {
+			draw(t.x[0].keypoints)
+		})
+	}, 60)
+}).catch(t.x => {
+	console.log(t.x.message)
+});
