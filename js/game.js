@@ -234,3 +234,15 @@ Box.prototype.isBreakable = function(e) {
 Box.prototype.isOutOfScreen = function() {
     return this.x > w || this.x + this.w < 0;
 };
+
+let aBox = new Box();
+
+const rightHandPosition = {
+    x: null,
+    y: null
+};
+
+const leftHandPosition = {
+    x: null,
+    y: null
+};
