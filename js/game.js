@@ -140,3 +140,11 @@ function getDirection(e) {
     oldX = e.x;
     oldY = e.y;
 }
+
+const breakDirections = ['slashDown', 'slashUp', 'slashLeft', 'slashRight'];
+const directions = ['right', 'left'];
+
+function showGameData() {
+    DOMboxes.textContent = boxes;
+    DOMscore.textContent = score;
+}
