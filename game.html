@@ -1,0 +1,46 @@
+!<!DOCTYPE html>
+<html>
+    <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Slash with beat and get fit with Slashbeatz ⚡. It uses the poseNet() API to detect your poses for breaking cubes!"
+    />
+    <title>Slashbeatz ⚡</title>
+    <meta name="author" content="Neilblaze" />
+    <meta name="keywords" content="Slashbeatz" />
+    <link rel="manifest" href="manifest.json" >
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/game.css" />
+    <link rel="stylesheet" href="css/type.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="images/slash.png" type="image/x-icon" />
+
+    <script src="js/saavn.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/disable.js"></script>
+    <script src="js/tfjs.js"></script> 
+    <script src="js/posenet.js"></script>
+
+    <!-- Manifest -->
+    <script>
+    if("serviceWorker" in navigator){
+    navigator.serviceWorker.register("sw.js").then(registration => {
+        console.log("SW Registered.");
+        console.log(registration);
+    }).catch(err => {
+        console.log("SW Failed");
+        console.log(error);
+    });
+    }
+    </script>
+    </head>
+    <body>
+
+        
+    <script src="js/game.js"></script>
+    </body>
+</html>
