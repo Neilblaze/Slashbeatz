@@ -38,3 +38,36 @@ async function loadVideo() {
 }
 
 loadVideo();
+
+// https://stackoverflow.com/questions/48234696/how-to-put-a-gif-with-canvas/48348567
+/* var Img = [];
+for (var i = 0; i < 5; i++) {
+  Img[i] = new Image();
+  Img[i].src = "/images/up/f"+i+".png";
+}
+
+
+function drawAnimatedImage(arr,x,y,angle,factor,changespeed) {
+    if (!factor) {
+        factor = 1;
+    }
+    if (!changespeed) {
+        changespeed = 1;
+    }
+    ctx.save();
+    ctx.translate(x, y);
+    ctx.rotate(angle * Math.PI / 180);
+    if (!!arr[Math.round(Date.now()/changespeed) % arr.length]) {
+    ctx.drawImage(arr[Math.round(Date.now()/changespeed) % arr.length], -(arr[Math.round(Date.now()/changespeed) % arr.length].width * factor / 2), -(arr[Math.round(Date.now()/changespeed) % arr.length].height * factor / 2), arr[Math.round(Date.now()/changespeed) % arr.length].width * factor, arr[Math.round(Date.now()/changespeed) % arr.length].height * factor);
+    }
+    ctx.restore();
+}
+
+function yop() {
+    ctx.clearRect(0,0,1000,1000)
+              if (Img.length == 6) {
+                  drawAnimatedImage(Img,300,100,0,1,60)
+              }
+  requestAnimationFrame(yop);
+  }
+  requestAnimationFrame(yop); */
