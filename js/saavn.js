@@ -3,7 +3,8 @@ function getRandomInt(max) {
   }
   (function getSaavn(d, t) {
     // Enter Playlist Numbers Here
-    var playlist = ['https://www.jiosaavn.com/embed/playlist/49',  
+    var playlist = ['https://www.jiosaavn.com/embed/playlist/49', 
+                    'https://www.jiosaavn.com/embed/playlist/173255392', 
                     'https://www.jiosaavn.com/embed/playlist/85481065'];
     var index = getRandomInt(playlist.length);
 
