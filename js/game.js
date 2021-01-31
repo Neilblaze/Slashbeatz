@@ -302,3 +302,20 @@ function tryToBreak(hand) {
         boxBroken();
     }
 }
+
+posenet
+    .load()
+    .then(function(net) {
+        video.play();
+        setInterval(() => {
+            net
+            .estimatePoses(video, flipHorizontal, outputStride)
+            .then(function(pose) {
+                draw(pose[0].keypoints);
+            });
+        }, 60);   
+    }
+)
+.catch(err => {
+    console.log(err.message);
+});
