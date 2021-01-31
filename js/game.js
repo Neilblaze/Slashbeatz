@@ -1,6 +1,9 @@
 const videoWidth = 500;
 const videoHeight = 500;
 const video = document.getElementById('myVideo');
+const imageScaleFactor = 0.5;   // 0.5 because (0.5 + 0.5) = 1
+const outputStride = 16;
+const flipHorizontal = false;   // Otherwise face flipping hobe
 
 async function setupCamera() {
     if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
