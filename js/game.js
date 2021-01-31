@@ -95,3 +95,23 @@ leftArrow.src = 'images/blocks/static/left.png';
 // const rightBoxArrow = new Image();
 const rightArrow = new Image();
 rightArrow.src = 'images/blocks/static/right.png';
+
+// Here comes the special part
+const w = canvas.width;
+const h = canvas.height;
+
+const centerX = w/2;
+const centerY = h/2;
+
+const breakableZoneStart = centerX;
+const breakableRightZoneEnd = centerX + (centerX/1.5);
+const breakableLeftZoneEnd = centerX - (centerX/1.5);
+
+let boxes = 0;
+let score = 0;
+
+let oldX = 0;
+let oldY = 0;
+let xDirection = '';
+let yDirection = '';
+let movements = [];     // init array
