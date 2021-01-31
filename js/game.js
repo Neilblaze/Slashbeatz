@@ -79,3 +79,19 @@ const DOMscore = document.getElementById('score');
 
 const canvas = document.getElementById('myCanvas');
 const ctx = canvas.getContext('2d');
+
+// const upBoxArrow = new Image();
+const upArrow = new Image();
+upArrow.src = 'images/blocks/static/up.png';
+
+// const downBoxArrow = new Image();
+const downArrow = new Image();
+downArrow.src = 'images/blocks/static/down.png';
+
+// const leftBoxArrow = new Image();
+const leftArrow = new Image();
+leftArrow.src = 'images/blocks/static/left.png';
+
+// const rightBoxArrow = new Image();
+const rightArrow = new Image();
+rightArrow.src = 'images/blocks/static/right.png';
