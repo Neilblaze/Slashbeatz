@@ -21,6 +21,19 @@
     <link rel="icon" href="images/slash.png" type="image/x-icon" />
     <script src="js/disable.js"></script>
     <script src="js/saavn.js"></script>
+
+    <!-- Manifest -->
+    <script>
+    if("serviceWorker" in navigator){
+    navigator.serviceWorker.register("sw.js").then(registration => {
+        console.log("SW Registered.");
+        console.log(registration);
+    }).catch(err => {
+        console.log("SW Failed");
+        console.log(error);
+    });
+    }
+    </script>
   </head>
 
   <!--<div class="barx">-->
