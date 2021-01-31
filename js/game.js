@@ -71,3 +71,11 @@ function yop() {
   requestAnimationFrame(yop);
   }
   requestAnimationFrame(yop); */
+
+// For Boxes
+const DOMboxes = document.getElementById('boxes');
+// For Score
+const DOMscore = document.getElementById('score');
+
+const canvas = document.getElementById('myCanvas');
+const ctx = canvas.getContext('2d');
