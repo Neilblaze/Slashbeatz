@@ -149,6 +149,25 @@ function showGameData() {
     DOMscore.textContent = score;
 }
 
+function drawScene() {
+    ctx.lineWidth = '1';
+    ctx.strokeStyle = '#999999';
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY);
+    ctx.lineTo(0, 0);
+    ctx.lineTo(w, 0);
+    ctx.lineTo(centerX, centerY);
+    ctx.lineTo(w, h);
+    ctx.lineTo(0, h);
+    ctx.lineTo(centerX, centerY);
+    ctx.closePath();
+    ctx.stroke();
+}
+
+function ctxDrawImage(img, x, y, w, h) {
+    ctx.drawImage(img, x, y, w, h);
+}
+
 function Box() {
     this.x = centerX;
     this.y = centerY;
