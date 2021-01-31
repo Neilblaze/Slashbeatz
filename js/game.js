@@ -115,3 +115,28 @@ let oldY = 0;
 let xDirection = '';
 let yDirection = '';
 let movements = [];     // init array
+
+let direction;
+
+function mostDirection(arr) {
+    var max = 1,
+        m = [],
+        val = arr[0],
+        i, x;
+    for( i = 0; i < arr.length; i ++ ) {
+        x = arr[i]
+        if (m[x]) {
+            ++m[x] > max && (max = m[i], val = x);
+        } else {
+            m[x] = 1;
+        }
+    } return val;    
+}
+
+function getDirection(e) {
+    xDirection = (oldX < e.x) ? 'right' : 'left' ;
+    yDirection = (oldY < e.y) ? 'down' : 'up' ;
+    ( Math.abs((e.y - oldY)) > Math.abs((e.x - oldX )) ) ? movements.push(yDirection) : movements.push(xDirection);
+    oldX = e.x;
+    oldY = e.y;
+}
