@@ -148,3 +148,70 @@ function showGameData() {
     DOMboxes.textContent = boxes;
     DOMscore.textContent = score;
 }
+
+function Box() {
+    this.x = centerX;
+    this.y = centerY;
+    this.breakDirection = breakDirections[Math.floor(Math.random() * breakDirections.length)];
+    this.direction = directions[Math.floor(Math.random() * directions.length)];
+    // this.speed = Math.round(Math.random() * 3) + 2; // Random speed ?
+    this.speed = 4;
+    this.w = this.h = 1;
+    this.isHandInside = false;
+}
+
+Box.prototype.updatePosition = function() {
+    if ( this.direction === 'right' ) {
+        this.x += this.speed;
+    } else {
+        this.x -= this.speed * 2;
+    }
+    this.w += this.speed;
+    this.y = centerY - (this.h / 2);
+    this.h += this.speed;
+    this.drawBox();
+};
+
+Box.prototype.drawBox = function() {
+    ctx.beginPath();
+    ctx.fillStyle = 'transparent';
+    let image = null;
+    switch ( this.breakDirection ) {
+        case 'slashDown':
+            image = downArrow;
+            break;
+        case 'slashUp':
+            image = upArrow;
+            break;
+        case 'slashLeft':
+            image = leftArrow;
+            break;
+        case 'slashRight':
+            image = rightArrow;
+            break;
+    }
+    ctxDrawImage(image, this.x, this.y, this.w, this.h);
+    ctx.fillRect(this.x, this.y, this.w, this.h);
+
+    if ( this.isBreakable() ) {
+        ctx.lineWidth = '1';
+        ctx.strokeStyle = '#fff'; // Task pending
+        ctx.rect(this.x, this.y, this.w, this.h);
+        ctx.stroke();
+    }
+
+};
+
+Box.prototype.isBreakable = function(e) {
+    if ( this.direction === 'right' ) {
+        return true;
+        // return this.x > breakableZoneStart && this.x < breakableRightZoneEnd;
+    } else {
+        return true;
+        // return this.x < breakableZoneStart && this.x > breakableLeftZoneEnd;
+    }
+};
+
+Box.prototype.isOutOfScreen = function() {
+    return this.x > w || this.x + this.w < 0;
+};
