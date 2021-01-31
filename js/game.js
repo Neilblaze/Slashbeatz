@@ -246,3 +246,59 @@ const leftHandPosition = {
     x: null,
     y: null
 };
+
+function tryToBreak(hand) {
+
+    if( aBox.isHandInside === false 
+        && hand.y > aBox.y
+        && hand.y < aBox.y + aBox.h
+        && hand.x > aBox.x
+        && hand.x < aBox.x + aBox.w
+        ) {
+        aBox.isHandInside = true;
+    }
+
+    if( aBox.breakDirection === 'slashDown'
+        && aBox.isBreakable()
+        && aBox.isHandInside    // Don't remove
+        && direction === 'down'
+        && hand.y > aBox.y + aBox.h
+        && hand.x > aBox.x 
+        && hand.x < aBox.x + aBox.w
+        ) {
+        boxBroken();
+    }
+    
+    if( aBox.breakDirection === 'slashUp'
+        && aBox.isBreakable()
+        && aBox.isHandInside    
+        && direction === 'up'
+        && hand.y < aBox.y
+        && hand.x > aBox.x 
+        && hand.x < aBox.x + aBox.w
+        ) {
+        boxBroken();
+    }
+
+    if( aBox.breakDirection === 'slashLeft'
+        && aBox.isBreakable()
+        && aBox.isHandInside    
+        && direction === 'left'
+        && hand.x < aBox.x
+        && hand.y > aBox.y 
+        && hand.y < aBox.y + aBox.h
+        ) {
+        boxBroken();
+    }
+
+    if( aBox.breakDirection === 'slashRight'
+        && aBox.isBreakable()
+        && aBox.isHandInside   
+        && direction === 'right'
+        && hand.x > aBox.x + aBox.w
+        && hand.y > aBox.y 
+        && hand.y < aBox.y + aBox.h
+        ) {
+        boxBroken();
+    }
+}
