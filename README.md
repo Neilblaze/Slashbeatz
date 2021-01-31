@@ -23,6 +23,7 @@ A lot of things, both summed up in technical & non-technical sides. Also not to 
 
 ## What's next for Slashbeatz
 We just really want this project to have a positive impact on people's lives! Still, we would love to make it more scalable & cross-platform so that the user interaction increases to a great extent :)
+Build with love and happiness.
 
 Resources :-
 
