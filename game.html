@@ -1,6 +1,5 @@
-!<!DOCTYPE html>
-<html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,9 +37,61 @@
     }
     </script>
     </head>
-    <body>
 
+    <body>
+    <!--<body class="intro__body">
+    <main class="intro">-->
+      
+      <div class="wrapper">
+      <div class="header">
+      <video id="myVideo" muted="muted"></video>
+      <canvas id="myCanvas" width="500" height="500"></canvas><br>
+
+      <!-- Hint/Tips SideBar -->
+      <aside class="hint hint-mid">
+        <p class="hint__toptxt hint__toptxt-mid">Use your Arms</p>
+        <img
+          src="images/yoyo.gif"
+          alt=""
+          class="hint__img hint__img-mid"
+          id="img-1"
+        />
+        <p class="hint__bottomtxt hint__bottomtxt-mid">to slash those blocks!</p>
+        <h3 class="hint__letter hint__letter-mid"></h3>
+      </aside>
+
+      <!-- Score Counter -->
+      <div class="score">
+        <img src="images/slashedx.png" alt="" class="score__img" />
+        <h5 id="score">00</h5>
+      </div>
+
+      <!-- Box Counter -->
+      <div class="boxes">
+        <p class="boxes__txt">Boxes</p>
+        <h4 id="boxes">00</h4>
+      </div>
+      </div>
+      </div>
+
+      <!--share btn current URL
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <div class="floating-container">
+        <div class="floating-button btn" id="copy" title="Share">
+        <i class="material-icons" style="margin-top:20px;">share</i></div>
+      </div>-->
+
+      <!--share btn-->
+      <div class="floating-container" onclick="url_copied()">
+        <div class="floating-button" id="copy" title="Share">
+        <i class="material-icons" style="margin-top:20px;">share</i></div>
+      </div>
         
-    <script src="js/game.js"></script>
+      <!--Music Widget-->
+      <div id="jiosaavn-widget">
     </body>
+    
+    <script src="js/game.js"></script>
+    <script src="js/clipboard.js"></script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>-->
 </html>
